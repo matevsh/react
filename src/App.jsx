@@ -1,15 +1,56 @@
-import {useState} from "react"
+import {useState} from 'react';
 
-function App() {
-  const [counter, setCounter] = useState(0);
+const db = [
+  {
+    id: 0,
+    title: 'Przepis na naleśniki',
+    desc: 'Na naturalnym mleku',
+    content: 'Zmieszać jajko i mleko...',
+  }, {
+    id: 1,
+    title: 'Przepis na hamburgera',
+    desc: 'Na ostro',
+    content: 'Hwdp test odwagi Rzeszów 2023',
+  }, {
+    id: 2,
+    title: 'Przepis na kurczaka',
+    desc: 'W sosie śmietanowym',
+    content: 'Wróć synu wróć z daleka',
+  },
+];
+
+const Post = ({desc, title, content}) => {
+  const [showContent, setShowContent] = useState(false);
+  const showMoreContent = () => setShowContent(!showContent);
 
   return (
-    <>
-        <h1>Hello react world!</h1>
-        <p>Counter is {counter}</p>
-        <button onClick={()=> setCounter(counter+1)}>Increase counter by one</button>
-    </>
-  )
-}
+    <div>
+      <h2>{title}</h2>
+      {showContent ? (
+        <>
+          <p>{desc}</p>
+          <p>{content}</p>
+        </>
+      ) : (
+        <>
+          <p>{desc}</p>
+          <button type="button" onClick={showMoreContent}>Czytaj więcej</button>
+        </>
+      )}
+      <hr />
+    </div>
+  );
+};
 
-export default App
+const Blog = () => {
+  return (
+    <>
+      <h1>To jest blog o gotowaniu</h1>
+      {db.map(({id, ...props}) => (
+        <Post key={id} {...props} />
+      ))}
+    </>
+  );
+};
+
+export default Blog;
