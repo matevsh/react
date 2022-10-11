@@ -1,0 +1,47 @@
+@import "../../../assets/variables";
+
+.box{
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem
+}
+
+.text, .btn {
+  padding: 0.5rem 1rem;
+  background: $input-color;
+  border-radius: 0.24rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.7);
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.text{
+  flex: 1 1 auto;
+  border: 1px solid darken($input-color, 5%);
+
+  &:hover, &:active{
+    background: darken($input-color, 10%);
+  }
+
+  &:focus{
+    background: darken($input-color, 5%);
+  }
+}
+
+.btn{
+  flex: 0 1 8rem;
+  background: $btn-color;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid darken($btn-color, 10%);
+
+  &:focus, &:hover, &:active{
+    background: darken($btn-color, 5%);
+  }
+}

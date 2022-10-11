@@ -1,9 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import {createRoot} from 'react-dom/client';
+import './main.scss';
+import Header from './components/Header/Header.jsx';
+import Menu from './components/Menu/Menu.jsx';
+import Hotels from './components/Hotels/Hotels.jsx';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const ROOT = createRoot(document.getElementById('root'));
+ROOT.render(
     <React.StrictMode>
-      <App />
+      <Header />
+      <Menu />
+      <Hotels />
     </React.StrictMode>,
 );

@@ -1,0 +1,24 @@
+@import "../../assets/variables";
+
+.link{
+  text-decoration: none;
+  color: $link-color;
+  font: {
+    size: 1.5rem;
+    weight: bold;
+    family: sans-serif;
+  }
+
+  &:hover{
+    color: darken($link-color, 10%)
+  }
+}
+
+.menu{
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.3rem;
+  margin: 0.3rem;
+  border: 1px solid darken($input-color, 30%);
+  border-radius: 0.3rem;
+}
