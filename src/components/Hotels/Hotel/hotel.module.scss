@@ -1,0 +1,65 @@
+@import '../../../assets/variables';
+
+.hotel{
+  height: 200px;
+  display: grid;
+  grid: {
+    template: repeat(3, 1fr) / 2fr 1fr 1fr;
+    template-areas: "img type rating"
+                    "img location show"
+                    "desc desc desc";
+  };
+  justify-items: center;
+  align-items: center;
+  border: 1px solid darken($input-color, 30%);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  background: darken($input-color, 5%);
+}
+
+.imgbox{
+  background: url('../../../assets/images/hotel.jpg') center/cover;
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: img;
+  border-radius: 0.3rem;
+}
+
+.type{
+  grid-area: type;
+  font: {
+    weight: bold;
+    size: 1.3rem;
+  }
+}
+
+.rating{
+  grid-area: rating;
+}
+
+.location{
+  grid-area: location;
+}
+
+.show{
+  grid-area: show;
+  width: 80%;
+  padding: 0.3rem 0;
+  cursor: pointer;
+  background: $link-color;
+  border: 1px solid darken($link-color, 20%);
+  color:white;
+  border-radius: 0.3rem;
+  font-weight: bold;
+
+  &:active, &:hover{
+    background: darken($link-color, 10%);
+    border: 1px solid darken($link-color, 50%);
+  }
+}
+
+.desc{
+  grid-area: desc;
+  padding-top: 1rem;
+}

@@ -1,15 +1,19 @@
 import {Component} from 'react';
+import style from './hotel.module.scss';
 
-class Hotel extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <h1>Hotel numer {this.props.id}</h1>
-    );
-  }
-}
+const Hotel = () => {
+  return (
+    <div className={style.hotel}>
+      <div className={style.imgbox}/>
+      <p className={style.type}>Pensjonat</p>
+      <p className={style.rating}>Ocena: 8.1</p>
+      <p className={style.location}>Warszawa</p>
+      <input className={style.show} type="button" value="Pokaż"/>
+      <p className={style.desc}>Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Ab autem consectetur, eveniet facere facilis
+        illum inventore laborum magni, nisi quae quo quos rat</p>
+    </div>
+  );
+};
 
 export default Hotel;
