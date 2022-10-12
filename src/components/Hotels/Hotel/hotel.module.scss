@@ -16,6 +16,7 @@
   margin-bottom: 1rem;
   border-radius: 0.3rem;
   background: darken($input-color, 5%);
+  gap: 0.5rem;
 }
 
 .imgbox{
@@ -32,14 +33,17 @@
     weight: bold;
     size: 1.3rem;
   }
+  align-self: end;
 }
 
 .rating{
   grid-area: rating;
+  align-self: end;
 }
 
 .location{
   grid-area: location;
+  align-self: start;
 }
 
 .show{
@@ -52,6 +56,7 @@
   color:white;
   border-radius: 0.3rem;
   font-weight: bold;
+  align-self: start;
 
   &:active, &:hover{
     background: darken($link-color, 10%);
@@ -61,5 +66,4 @@
 
 .desc{
   grid-area: desc;
-  padding-top: 1rem;
 }
