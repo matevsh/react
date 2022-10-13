@@ -1,17 +1,14 @@
-import {Component} from 'react';
 import style from './hotel.module.scss';
 
-const Hotel = () => {
+const Hotel = ({name, rating, location, desc}) => {
   return (
     <div className={style.hotel}>
       <div className={style.imgbox}/>
-      <p className={style.type}>Pensjonat</p>
-      <p className={style.rating}>Ocena: 8.1</p>
-      <p className={style.location}>Warszawa</p>
+      <p className={style.type}>{name}</p>
+      <p className={style.rating}>Ocena: {rating}</p>
+      <p className={style.location}>{location}</p>
       <input className={style.show} type="button" value="Pokaż"/>
-      <p className={style.desc}>Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit. Ab autem consectetur, eveniet facere facilis
-        illum inventore laborum magni, nisi quae quo quos rat</p>
+      <p className={style.desc}>{desc}</p>
     </div>
   );
 };

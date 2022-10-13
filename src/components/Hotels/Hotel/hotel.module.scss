@@ -1,6 +1,7 @@
 @import '../../../assets/variables';
 
 .hotel{
+  max-width: 550px;
   height: 200px;
   display: grid;
   grid: {
@@ -33,6 +34,7 @@
     weight: bold;
     size: 1.3rem;
   }
+  text-align: center;
   align-self: end;
 }
 
@@ -44,6 +46,15 @@
 .location{
   grid-area: location;
   align-self: start;
+  background: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid $link-color;
+  font: {
+    weight: bold;
+    size: 1rem;
+  }
+  color: darken($input-color, 70%);
 }
 
 .show{
@@ -55,7 +66,10 @@
   border: 1px solid darken($link-color, 20%);
   color:white;
   border-radius: 0.3rem;
-  font-weight: bold;
+  font: {
+    weight: bold;
+    size: 1rem;
+  }
   align-self: start;
 
   &:active, &:hover{
